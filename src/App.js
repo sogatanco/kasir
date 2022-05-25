@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { IntlProvider } from 'react-intl';
+import Layout from './Layout';
+import messages from './messages';
+import './styles/App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [locale, setLocale] = useState('en');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider locale={locale} messages={messages[locale]}>
+      <Layout setLocale={setLocale} />
+    </IntlProvider>
   );
 }
 

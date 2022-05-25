@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+.react-bootstrap-table table {
+  table-layout: auto!important;
+  cursor: pointer;
+  
+}
+.data{
+  font-family: 'Rajdhani', sans-serif!important;
+}
+
+.page-link {
+    color:black !important;
+}
+
+.page-item.active .page-link{
+  color :#ffffff !important;
+  background-color: black !important;
+  border-color: black!important;
+}
